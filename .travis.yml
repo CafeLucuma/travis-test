@@ -1,1 +1,11 @@
 language: java
+
+services:
+  - docker
+
+before_install:
+  - docker build -t app .
+  - docker image ls
+
+script:
+  docker run app
