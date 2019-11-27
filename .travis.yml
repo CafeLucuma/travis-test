@@ -3,8 +3,10 @@ language: java
 services:
   - docker
 
-if: branch = master
-
+branches:
+  only:
+    - master
+    
 before_install:
   - docker build -t app .
   - docker image ls
