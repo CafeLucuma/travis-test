@@ -3,10 +3,11 @@ language: java
 services:
   - docker
 
+#this means it will only build on master branch
 branches:
   only:
     - master
-    
+
 before_install:
   - docker build -t app .
   - docker image ls
