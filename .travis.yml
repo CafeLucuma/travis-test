@@ -3,6 +3,7 @@ language: java
 services:
   - docker
 
+#this means it will only build on master branch
 branches:
   only:
     - master
